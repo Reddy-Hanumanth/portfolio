@@ -26,28 +26,26 @@ const Contact = () => {
     }
   };
 
-
   const showToast = (message) => {
-    setNotification({ show: false, message });
+    setNotification({ show: true, message });
     setTimeout(() => {
       setNotification({ show: false, message: "" });
     }, 2000);
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  if (!formData.name.trim()) {
-        setError("Name is required!");
-        return; 
+    if (!formData.name.trim()) {
+      setError("Name is required!");
+      return;
     }
-  if (!formData.email.trim()) {
-        setError("Email is required!");
-        return; 
+    if (!formData.email.trim()) {
+      setError("Email is required!");
+      return;
     }
-    const requiredSuffix = "@gmail.com" ;
-    if (!formData.email.endsWith(requiredSuffix)  ) {
+    const requiredSuffix = "@gmail.com";
+    if (!formData.email.endsWith(requiredSuffix)) {
       const errorMessage = `Enter The currect email ${requiredSuffix}`;
       setError(errorMessage);
       console.error(errorMessage);
@@ -60,77 +58,69 @@ const Contact = () => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className={`fixed top-5 left-1/2 transform -translate-x-1/2 bg-green-500 text-white  py-4 rounded-lg shadow-2xl z-50 flex items-center space-x-2 animate-bounce`} >
+      {notification.show && (<div
+        className={` fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-green-500 p-2 rounded-md text-white`}
+      >
         <span className={`font-semibold`}>{notification.message}</span>
-      </div>
-      <div className="font-extralight flex flex-col justify-center items-center text-black space-y-10 pt-40 max-w-[700px]">
-        <div className="flex flex-col justify-center items-center space-y-6 ">
-          <div className="">
-            <p className="text-3xl ">Let's Connect</p>
-          </div>
+      </div>)}
+      
+      <section class="min-h-screen flex flex-col items-center justify-center px-4">
+        <h2 class="text-3xl font-semibold mb-2">Let's Connect</h2>
+        <p class="text-center text-gray-500 max-w-md mb-8">
+          Have a project in mind or just want to say hi? Feel free to send me a
+          message. I'm always open to discuss new ideas and opportunities.
+        </p>
+        <form
+          class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl space-y-5"
+          onSubmit={handleSubmit}
+        >
           <div>
-            <p className="text-center ">
-              Have a project in mind or just want to say hi? Feel free to send
-              me a message. I'm always open to discuss new ideas and
-              opportunities.
-            </p>
-          </div>
-        </div>
-        <div className="py-10 flex justify-center items-start ">
-          <form action="" className="flex flex-col" onSubmit={handleSubmit}>
-            <label htmlFor="" className="flex max-[600px]:justify-center ">
-              name
-            </label>
+            <label class="block text-sm mb-1 text-gray-700">Name</label>
             <input
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="enter your name"
-              className="w-[700px] h-[50px] rounded border-2 border-gray-300 focus:outline-none text-black px-3 mb-8 my-2"
+              placeholder="Enter your name"
+              class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
             />
+          </div>
 
-            <label htmlFor="" className="flex max-[600px]:justify-center ">
-              email
-            </label>
+          <div>
+            <label class="block text-sm mb-1 text-gray-700">Email</label>
             <input
-              type="text"
-              id="email"
-              name="email"
+              type="email"
               value={formData.email}
               onChange={handleChange}
+              id="email"
+              name="email"
               placeholder="abcd@gmail.com"
-              className="w-[700px] h-[50px] rounded border-2 border-gray-300 focus:outline-none text-black px-3 mb-8 my-2"
+              class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
             />
+          </div>
 
-            <label htmlFor="" className="flex max-[600px]:justify-center ">
-              message
-            </label>
+          <div>
+            <label class="block text-sm mb-1 text-gray-700">Message</label>
             <textarea
-              name="message"
-              id="message"
+              rows="4"
+              placeholder="Message"
+              id="Message"
+              name="Message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="message"
-              className="w-[700px] h-[50px] rounded border-2 border-gray-300 focus:outline-none text-black p-2 mb-8 my-2"
+              class="w-full px-4 py-2 border rounded-md resize-none focus:ring-2 focus:ring-purple-500 outline-none"
             ></textarea>
-
-            {error && <p>{error}</p>}
-
-            <div className="flex items-center justify-center">
-              <button
-                type="submit"
-                className="w-[150px] h-10 cursor-pointer overflow-hidden rounded-lg  px-3 bg-purple-500  hover:bg-opacity-90 my-4 text-white"
-              >
-                send message
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+          </div>
+          {error && <p className="text-red-500">{error}</p>}
+          <button class="w-full bg-purple-500 text-white py-2 rounded-md hover:bg-purple-600 transition">
+            Send Message
+          </button>
+        </form>
+      </section>
     </div>
   );
 };
 
 export default Contact;
+

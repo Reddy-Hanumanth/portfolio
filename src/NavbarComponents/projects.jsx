@@ -7,17 +7,17 @@ const projects = () => {
   return (
     <div className='flex flex-wrap flex-col items-center justify-center '>
           <div>
-            <h2 className='text-2xl font-bold-700 mb-12'>Featured Projects</h2>
+            <h2 className='text-2xl font-bold-700 mb-12 font-semibold'>Featured Projects</h2>
           </div>
-          <div className=' grid grid-cols-3 min-[950px]:grid-cols-3  min-[650px]:grid-cols-2  max-[650px]:grid-cols-1 gap-8 max-w-[1200px]'>
+          <div className=' grid lg:grid-cols-3  md:grid-cols-2 max-sm:grid-cols-1 sm:grid-cols-1 gap-8 max-w-[1200px]'>
             <div className=' bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded relative'>
               <div>
-                <img src={Image1} alt="" className=' rounded h-[220px]'/>
+                <img src={Image1} alt="" className=' rounded'/>
               </div>
               <div className='space-y-4'>
                 <h2 className='mt-5 text-xl'>Personal portfolio</h2>
                 <p className='mt-19 text-black/60'>A personal portfolio showcasing my skills, projects, and journey as a developer.
-Designed with a clean UI and smooth user experience to reflect my style.</p>
+                    Designed with a clean UI and smooth user experience to reflect my style.</p>
               </div>
               <div className='flex space-x-3'>
                 <span className='bg-purple-300 text-blue-900 rounded-full px-2'>HTML </span>
@@ -72,7 +72,7 @@ Built for seamless interaction and a smooth user experience.”</p>
                 <img src={google_gemini} alt="" />
               </div>
               <div className='space-y-4'>
-                <h2 className='mt-5 text-xl'>E-commerce platform</h2>
+                <h2 className='mt-5 text-xl'>Google Gemini</h2>
                 <p className='mt-19 text-black/60'>A Google Gemini clone featuring interactive AI conversations, real-time responses, and a clean modern interface built with web technologies.</p>
               </div>
               <div className='flex space-x-3'>
