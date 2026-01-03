@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../Assets/logo.png";
+import Logo from "../../Assets/Logo.png";
 import Menu from "./menu_icon.png";
 import Close from "./closeimg.svg";
 const Header = () => {
