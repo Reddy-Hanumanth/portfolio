@@ -64,18 +64,18 @@ const Contact = () => {
         <span className={`font-semibold`}>{notification.message}</span>
       </div>)}
       
-      <section class="min-h-screen flex flex-col items-center justify-center px-4">
-        <h2 class="text-3xl font-semibold mb-2">Let's Connect</h2>
-        <p class="text-center text-gray-500 max-w-md mb-8">
+      <section className="min-h-screen flex flex-col items-center justify-center px-4">
+        <h2 className="text-3xl font-semibold mb-2">Let's Connect</h2>
+        <p className="text-center text-gray-500 max-w-md mb-8">
           Have a project in mind or just want to say hi? Feel free to send me a
           message. I'm always open to discuss new ideas and opportunities.
         </p>
         <form
-          class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl space-y-5"
+          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl space-y-5"
           onSubmit={handleSubmit}
         >
           <div>
-            <label class="block text-sm mb-1 text-gray-700">Name</label>
+            <label className="block text-sm mb-1 text-gray-700">Name</label>
             <input
               type="text"
               id="name"
@@ -83,12 +83,12 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
             />
           </div>
 
           <div>
-            <label class="block text-sm mb-1 text-gray-700">Email</label>
+            <label className="block text-sm mb-1 text-gray-700">Email</label>
             <input
               type="email"
               value={formData.email}
@@ -96,12 +96,12 @@ const Contact = () => {
               id="email"
               name="email"
               placeholder="abcd@gmail.com"
-              class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
             />
           </div>
 
           <div>
-            <label class="block text-sm mb-1 text-gray-700">Message</label>
+            <label className="block text-sm mb-1 text-gray-700">Message</label>
             <textarea
               rows="4"
               placeholder="Message"
@@ -109,11 +109,11 @@ const Contact = () => {
               name="Message"
               value={formData.message}
               onChange={handleChange}
-              class="w-full px-4 py-2 border rounded-md resize-none focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full px-4 py-2 border rounded-md resize-none focus:ring-2 focus:ring-purple-500 outline-none"
             ></textarea>
           </div>
           {error && <p className="text-red-500">{error}</p>}
-          <button class="w-full bg-purple-500 text-white py-2 rounded-md hover:bg-purple-600 transition">
+          <button className="w-full bg-purple-500 text-white py-2 rounded-md hover:bg-purple-600 transition">
             Send Message
           </button>
         </form>
