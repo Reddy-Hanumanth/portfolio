@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../Assets/Logo.png";
-import Menu from "./menu_icon.png";
-import Close from "./closeimg.svg";
+import Assets from "../../Assets/assets";
+
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const menuHandler = () => {setMenu(!menu)};
@@ -14,86 +13,43 @@ const Header = () => {
     { path: "/contact", label: "Contact" },
   ];
 
-
+  
 
   return (
-    <div>
-      <nav className="top-0 x-50 shadow-md font-extralight animate-slideDown">
-        <div className="w-full mx-auto px-4 py-2 flex justify-between items-center">
-          <div className="flex items-center">
-              <Link to="/">
-                <img
-                  src={Logo}
-                  alt="logo"
-                  width="70px"
-                  className="rounded-full"
-                />
-              </Link>
-              {/* <h4 className="max-[600px]:hidden text-xl font-normal">Hanumanth Reddy</h4> */}
-          </div>
+    <div className="sticky top-0 z-50 bg-[#f6f8f6] shadow-md flex items-center justify-between px-6 h-20">
 
-          <div>
-              <button
-                onClick={menuHandler}
-                aria-expanded = {menu}
-                target="_blank"
-                id="menu-button"
-                className={` min-[765px]:hidden text-white focus:outline-none cursor-pointer pl-12`}
-              >
-                <img src={menu ? Close : Menu} alt="Menu" className="w-6 h-6" />
-              </button>
+      {/* Logo */}
+      <div className="flex items-center justify-center">
+        <img src={Assets.Logo} alt="Logo" className="h-20"/>
+        <h1 className="font-semibold">Hanumanth</h1>
+      </div>
 
 
-            
-
-            <ul className={`flex max-[765px]:hidden space-x-6 `}>
-              {navlinks.map((link) => (
-                <li
-                  key={link.path}
-                  className="hover:text-cyan-400 cursor-pointer"
-                >
-                  <Link to={link.path}>{link.label}</Link>
-                </li>
-              ))}
-
-              <li className="bg-purple-500 px-3 py-1 rounded-xl cursor-pointer text-white hover:text-cyan-400">
-                <a
-                  href="/hanumanth_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Resume
-                </a>
-              </li>
-            </ul>
+      {/* Desktop Menu */}
+      <div className="hidden sm:flex gap-8 items-center">
+        {navlinks.map((link) => (
+          <Link key={link.path} to={link.path} className="text-gray-500 hover:text-gray-900 hover:border-b border-black transition-colors duration-300 ">
+            <span>{link.label}</span>
+          </Link>
+        ))}
+        <button className="bg-[#39FF14] hover:bg-[#28CC00] text-black rounded-xl px-4 py-2">Resume</button>
+      </div>
 
 
-            {menu ? (
-              <ul className=" z-10  top-4 right-24 flex justify-center items-center flex-col gap-4 duration-300 ease-in min-[765px]:hidden">
-                {navlinks.map((link) => (
-                  <li
-                    key={link.path}
-                    className="hover:text-cyan-400 cursor-pointer"
-                  >
-                    <Link to={link.path}>{link.label}</Link>
-                  </li>
-                ))}
-                <li className="bg-purple-500 px-3 py-1 rounded-xl cursor-pointer text-white">
-                  <a
-                    href="/HanumanthResume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Resume
-                  </a>
-                </li>
-              </ul>
-            ) : (
-              <div className=" z-20  top-0 left-0 flex justify-center items-center flex-col gap-5 duration-300 ease-in"></div>
-            )}
-          </div>
-        </div>
-      </nav>
+      {/* Mobile Menu Icon */}
+      {menu ? <img src={Assets.Close} alt="Close Menu" className="sm:hidden w-6 cursor-pointer" onClick={menuHandler} /> : <img src={Assets.Menu} alt="Open Menu" className="sm:hidden w-6 cursor-pointer" onClick={menuHandler} />}
+
+      {menu ? (
+        <div className="absolute top-20 right-0 bg-white shadow-md rounded-lg p-4 w-40 flex flex-col gap-4 sm:hidden">
+          {navlinks.map((link) => (
+            <Link key={link.path} to={link.path} className="text-gray-700 hover:text-gray-900  transition-colors duration-300" onClick={menuHandler}> 
+              {link.label}
+            </Link>
+          ))}
+          <button className=" bg-[#39FF14] hover:bg-[#28CC00] text-black rounded-xl px-4 py-2 mt-4">Resume</button>
+        </div> 
+      ) : null }
+
     </div>
   );
 };

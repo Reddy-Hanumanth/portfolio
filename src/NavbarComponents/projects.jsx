@@ -4,6 +4,7 @@ import Image2 from "../Assets/TextToSpeech.png";
 import Image3 from "../Assets/QuickSign.png";
 import google_gemini from "../Assets/google_gemini.png";
 import E_commerce from "../Assets/E_commerce.png";
+import Agency from "../Assets/Agency.png";
 
 const projects = () => {
   return (
@@ -38,9 +39,6 @@ const projects = () => {
             </span>
           </div>
           <div className="flex space-x-5 text-blue-900">
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
-              <a href="">Live site</a>
-            </button>
             <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
               <a href="">View Code </a>
             </button>
@@ -81,6 +79,41 @@ const projects = () => {
         </div>
         <div className=" flex flex-col justify-between bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded  relative">
           <div>
+            <img src={Agency} alt="" />
+          </div>
+          <div className="space-y-4">
+            <h2 className="mt-5 text-xl">Agency.AI</h2>
+            <p className="mt-19 text-black/60">
+              Designed a fully responsive agency landing page with interactive animations using React and Tailwind CSS. Focused on seamless user experience and consistent performance across all devices.
+            </p>
+          </div>
+          <div className="flex space-x-3 flex-wrap gap-2 justify-center items-center">
+            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
+              HTML
+            </span>
+            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
+              Tailwind CSS
+            </span>
+            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
+              React JS
+            </span>
+            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
+              Framer Motion
+            </span>
+          </div>
+          <div className="flex space-x-5 text-blue-900">
+            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
+              <a href="https://reddy-hanumanth.github.io/Digita-_Agency/">Live site</a>
+            </button>
+            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
+              <a href="https://github.com/Reddy-Hanumanth/Digita-_Agency">
+                View Code{" "}
+              </a>
+            </button>
+          </div>
+        </div>
+        <div className=" flex flex-col justify-between bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded  relative">
+          <div>
             <img src={google_gemini} alt="" />
           </div>
           <div className="space-y-4">
@@ -103,7 +136,7 @@ const projects = () => {
           </div>
           <div className="flex space-x-5 text-blue-900">
             <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
-              <a href="https://google-gemini-clone-ncy2.vercel.app/">
+              <a href="https://google-gemini-clone-ncy2.vercel.app//">
                 Live site
               </a>
             </button>

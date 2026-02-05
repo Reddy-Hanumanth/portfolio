@@ -6,23 +6,27 @@ module.exports = {
   theme: {
     extend: {
       keyframes:{
-        fadeIn : {
-          '0%' : {opacity : '0'},
-          '100%' : {opacity : '1'}
-        },
-        slideDown: {
-          '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+         heartBeat: { // Define the keyframes name
+          '0%': { transform: 'scale(1)' },
+          '14%': { transform: 'scale(1.3)' },
+          '28%': { transform: 'scale(1)' },
+          '42%': { transform: 'scale(1.3)' },
+          '70%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1)' },
         },
       },
        animation: {
-        fadeIn: 'fadeIn 1.5s ease-out forwards',
-        slideDown: 'slideDown 1.5s ease forwards',
-        slideUp: 'slideUp 1s ease forwards',
+        heartBeat: { // Define the keyframes name
+          '0%': { transform: 'scale(1)' },
+          '14%': { transform: 'scale(1.3)' },
+          '28%': { transform: 'scale(1)' },
+          '42%': { transform: 'scale(1.3)' },
+          '70%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        'heartBeat': 'heartBeat 1s infinite', // Register the utility name and duration/iteration
       },
     },
   },
