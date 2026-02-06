@@ -7,8 +7,8 @@ import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, Ro
 import About from './NavbarComponents/About'
 import Contact from './NavbarComponents/Contact';
 import Projects from './NavbarComponents/projects';
-import Resume from './NavbarComponents/Resume';
 import Home from './NavbarComponents/Home';
+import Hero from './NavbarComponents/Hero';
 
 const router = createBrowserRouter(
   [
@@ -22,8 +22,12 @@ const router = createBrowserRouter(
       },
       {
         path:'about',
-        element:<About/>
-      },
+        element:(
+        <>
+          <Hero/>
+          <About/>
+        </>
+      )},
       {
         path:'contact',
         element:<Contact/>

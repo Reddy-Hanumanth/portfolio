@@ -7,7 +7,7 @@ import Google_Gemini from './google_gemini.png'
 import Portfolio from './Portfolio.png'
 import QuickSign from './QuickSign.png'
 import TextToSpeech from './TextToSpeech.png'
-
+import Image from './image.jpeg'
 
 const Assets = {
     Logo,
@@ -18,6 +18,7 @@ const Assets = {
     Google_Gemini,
     Portfolio,
     QuickSign,
-    TextToSpeech
+    TextToSpeech,
+    Image,
 }   
 export default Assets;
