@@ -1,225 +1,121 @@
 import React from "react";
-import Image1 from "../Assets/Portfolio.png";
-import Image2 from "../Assets/TextToSpeech.png";
-import Image3 from "../Assets/QuickSign.png";
-import google_gemini from "../Assets/google_gemini.png";
-import E_commerce from "../Assets/E_commerce.png";
-import Agency from "../Assets/Agency.png";
+import Assets from "../Assets/assets";
 
 const projects = () => {
+  const projectsData = [
+    {
+      image: Assets.Agency_Ai,
+      title: "Agency.AI",
+      description:
+        "Designed a fully responsive agency landing page with interactive animations using React and Tailwind CSS. Focused on seamless user experience and consistent performance across all devices.",
+      technologies: ["JavaScript", "HTML/CSS", "Tailwind", "React"],
+      liveLink: "https://reddy-hanumanth.github.io/Digita-_Agency/",
+      codeLink: "https://github.com/Reddy-Hanumanth/Digita-_Agency",
+    },
+    {
+      image: Assets.E_Commerce,
+      title: "E-Commerce Platform",
+      description:
+        "Developed a responsive e-commerce platform with product filtering, cart functionality using Tailwind CSS and React.",
+      technologies: ["JavaScript", "HTML/CSS", "Tailwind", "React"],
+      liveLink: "https://e-commerce-g2cdxz5cb-hanumanth-reddys-projects.vercel.app/",
+      codeLink: "https://github.com/Reddy-Hanumanth/E-commerce",
+    },
+    {
+      image: Assets.TextToSpeech,
+      title: "Text to Speech Converter",
+      description:
+        "Developed a responsive text-to-speech converter with customizable voice options using JavaScript and HTML/CSS",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      liveLink: "https://text-to-speech-nine-henna.vercel.app/",
+      codeLink: "https://github.com/Reddy-Hanumanth/Text_to_Speech",
+    },
+    {
+      image: Assets.QuickSign,
+      title: "QuickSign",
+      description:
+        "Developed a Digital Sign App with customizable color, font size, and background options using JavaScript and HTML/CSS.",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      liveLink: "https://quick-sign-app-three.vercel.app/",
+      codeLink: "https://github.com/Reddy-Hanumanth/Quick_sign-app",
+    },
+    {
+      image: Assets.Google_Gemini,
+      title: "Google_Gemini_Clone",
+      description:
+        "Designed a Google Gemini clone with interactive UI elements using React.",
+      technologies: ["JavaScript", "HTML/CSS", "React"],
+      liveLink: "https://google-gemini-clone-ncy2.vercel.app/",
+      codeLink: "https://github.com/Reddy-Hanumanth/google_gemini_clone",
+    },
+  ];
+
   return (
-    <div className="flex flex-wrap flex-col items-center justify-center ">
-      <div>
-        <h2 className="text-2xl font-bold-700 mb-12 font-semibold">
-          Featured Projects
-        </h2>
+    <>
+      <div className="flex flex-col items-center justify-center gap-20 mt-20 bg-[#f6f8f6] py-20 ">
+        <div className="flex flex-col gap-3">
+          <h3 className="text-[#0F766E]  text-center font-semibold">
+            PORTFOLIO
+          </h3>
+          <h1 className="text-3xl font-bold text-center">Featured Projects</h1>
+          <hr className="w-14 h-[6px] mx-auto bg-blue-600 rounded-full" />
+        </div>
+
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 max-w-[1200px]">
+          {projectsData.map((project, index) => (
+            <div
+              key={index}
+              className=" roup relative mb-6 bg-[#F3F4F6] border-2 border-gray-300 rounded-lg p-5 flex flex-col gap-4 justify-evenly shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="transform group-hover:scale-105 transition-transform duration-500">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="relative rounded-md object-cover h-48 w-full"
+                />
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="mt-5 text-xl">{project.title}</h2>
+                <p className="mt-19 text-black/60">{project.description}</p>
+              </div>
+
+              {/* <div className="flex flex-wrap gap-2 text-green-500/70 border-t border-gray-300 pt-4">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="text-[#0F766E]">
+                          {tech}
+                        </span>
+                      ))}
+                    </div> */}
+
+              <div className="flex gap-4">
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#0F766E] hover:scale-105 text-white rounded-xl
+               px-4 py-2 transition-transform duration-300 font-semibold"
+                >
+                  Live Site
+                </a>
+
+                {project.codeLink && (
+                  <a
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-gray-400/60 text-black rounded-xl
+                 px-4 py-2 font-semibold hover:bg-gray-200 transition-colors"
+                  >
+                    GitHub
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className=" grid lg:grid-cols-3  md:grid-cols-2 max-sm:grid-cols-1 sm:grid-cols-1 gap-8 max-w-[1200px]">
-        <div className=" bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded relative flex flex-col justify-between">
-          <div>
-            <img src={Image1} alt="" className=" rounded" />
-          </div>
-          <div className="space-y-4">
-            <h2 className="mt-5 text-xl">Personal portfolio</h2>
-            <p className="mt-19 text-black/60">
-              A personal portfolio showcasing my skills, projects, and journey
-              as a developer. Designed with a clean UI and smooth user
-              experience to reflect my style.
-            </p>
-          </div>
-          <div className="flex space-x-3">
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              HTML{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              Taiwind CSS{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              React JS{" "}
-            </span>
-          </div>
-          <div className="flex space-x-5 text-blue-900">
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
-              <a href="">View Code </a>
-            </button>
-          </div>
-        </div>
-        <div className=" flex flex-col justify-between bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded  relative">
-          <div>
-            <img src={E_commerce} alt="" />
-          </div>
-          <div className="space-y-4">
-            <h2 className="mt-5 text-xl">E-commerce</h2>
-            <p className="mt-19 text-black/60">
-              A responsive shopping platform showcasing product listings, cart
-              features, and clean UI design.
-            </p>
-          </div>
-          <div className="flex space-x-3">
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              HTML{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              Tailwind CSS
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              React JS
-            </span>
-          </div>
-          <div className="flex space-x-5 text-blue-900">
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
-              <a href="https://e-commerce-gold-iota.vercel.app/">Live site</a>
-            </button>
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
-              <a href="https://github.com/Reddy-Hanumanth/E-commerce">
-                View Code{" "}
-              </a>
-            </button>
-          </div>
-        </div>
-        <div className=" flex flex-col justify-between bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded  relative">
-          <div>
-            <img src={Agency} alt="" />
-          </div>
-          <div className="space-y-4">
-            <h2 className="mt-5 text-xl">Agency.AI</h2>
-            <p className="mt-19 text-black/60">
-              Designed a fully responsive agency landing page with interactive animations using React and Tailwind CSS. Focused on seamless user experience and consistent performance across all devices.
-            </p>
-          </div>
-          <div className="flex space-x-3 flex-wrap gap-2 justify-center items-center">
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
-              HTML
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
-              Tailwind CSS
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
-              React JS
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2 py-1">
-              Framer Motion
-            </span>
-          </div>
-          <div className="flex space-x-5 text-blue-900">
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
-              <a href="https://reddy-hanumanth.github.io/Digita-_Agency/">Live site</a>
-            </button>
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
-              <a href="https://github.com/Reddy-Hanumanth/Digita-_Agency">
-                View Code{" "}
-              </a>
-            </button>
-          </div>
-        </div>
-        <div className=" flex flex-col justify-between bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded  relative">
-          <div>
-            <img src={google_gemini} alt="" />
-          </div>
-          <div className="space-y-4">
-            <h2 className="mt-5 text-xl">Google Gemini</h2>
-            <p className="mt-19 text-black/60">
-              A Google Gemini clone featuring interactive AI conversations and a
-              clean modern interface built with web technologies.
-            </p>
-          </div>
-          <div className="flex space-x-3">
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              HTML{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              CSS{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              React{" "}
-            </span>
-          </div>
-          <div className="flex space-x-5 text-blue-900">
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
-              <a href="https://google-gemini-clone-ncy2.vercel.app//">
-                Live site
-              </a>
-            </button>
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
-              <a href="https://github.com/Reddy-Hanumanth/google_gemini_clone">
-                View Code{" "}
-              </a>
-            </button>
-          </div>
-        </div>
-        <div className=" flex flex-col justify-between bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded relative">
-          <div>
-            <img src={Image2} alt="" className="rounded" />
-          </div>
-          <div className="space-y-4">
-            <h2 className="mt-5 text-xl">Text To Speech</h2>
-            <p className="mt-19 text-black/60">
-              Type your text and instantly hear it come alive through
-              high-quality speech output. Built for seamless interaction and a
-              smooth user experience.”
-            </p>
-          </div>
-          <div className="flex space-x-3">
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              HTML{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              CSS{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              JavaScript{" "}
-            </span>
-          </div>
-          <div className="flex space-x-5 text-blue-900">
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
-              <a href="https://text-to-speech-nine-henna.vercel.app/">
-                Live site
-              </a>
-            </button>
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
-              <a href="https://github.com/Reddy-Hanumanth/Text_to_Speech">
-                View Code{" "}
-              </a>
-            </button>
-          </div>
-        </div>
-        <div className=" flex flex-col justify-between bg-gray-100 border hover:shadow-lg p-2 overflow-hidden space-y-3 rounded relative">
-          <div>
-            <img src={Image3} alt="" className="h-[220px] w-full" />
-          </div>
-          <div className="space-y-4 rounded">
-            <h2 className="mt-5 text-xl">Quick Sign App</h2>
-            <p className="mt-19 text-black/60">
-              A versatile digital signature app built with Canvas, allowing
-              users to draw, customize, and save signatures directly in local
-              storage.
-            </p>
-          </div>
-          <div className="flex space-x-3">
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              HTML{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              CSS{" "}
-            </span>
-            <span className="bg-purple-300 text-blue-900 rounded-full px-2">
-              JavaScript{" "}
-            </span>
-          </div>
-          <div className="flex space-x-5 text-blue-900">
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-900 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-900">
-              <a href="https://quick-sign-app-three.vercel.app/">Live site</a>
-            </button>
-            <button className="w-full h-10 cursor-pointer overflow-hidden rounded-lg   hover:bg-purple-500 hover:text-white  hover:bg-opacity-90  text-purple-900 shadow-md my-2 border-2 border-purple-500">
-              <a href="https://github.com/Reddy-Hanumanth/Quick_sign-app">
-                View Code{" "}
-              </a>
-            </button>
-          </div>
-        </div>
-        
-      </div>
-    </div>
+    </>
   );
 };
 

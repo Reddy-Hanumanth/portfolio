@@ -10,7 +10,7 @@ const About = () => {
             <img
               src={Assets.Image}
               alt=""
-              className="sm:h-[500px] max-w-full border-2 border-gray-300 h-[400px] w-full rounded-xl transform group-hover:scale-105 transition-transform duration-500 opac"
+              className="sm:h-[500px] max-w-full border-2 border-gray-300 h-[400px] w-full rounded-xl transform group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
