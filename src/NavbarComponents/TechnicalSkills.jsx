@@ -1,6 +1,6 @@
 import React from "react";
 
-const Technical_Skills = () => {
+const TechnicalSkills = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-20 mt-20  py-20">
@@ -95,4 +95,4 @@ const Technical_Skills = () => {
   );
 };
 
-export default Technical_Skills;
+export default TechnicalSkills;

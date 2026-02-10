@@ -4,7 +4,7 @@ import Contact from './NavbarComponents/Contact'
 import { Outlet } from 'react-router-dom'
 import About from './NavbarComponents/About'
 import Hero from './NavbarComponents/Hero'
-import Technical_Skills from './NavbarComponents/TechnicalSkills'
+import TechnicalSkills from './NavbarComponents/TechnicalSkills'
 const Home = () => {
   return (
     <div>
@@ -12,7 +12,7 @@ const Home = () => {
         <Hero />
         <About/>
       </div>
-      <Technical_Skills />
+      <TechnicalSkills />
       <Projects/>
       <Contact/> 
       <Outlet/> 
