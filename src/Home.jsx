@@ -4,7 +4,7 @@ import Contact from './NavbarComponents/Contact'
 import { Outlet } from 'react-router-dom'
 import About from './NavbarComponents/About'
 import Hero from './NavbarComponents/Hero'
-import Technical_Skills from './NavbarComponents/Technical_Skills'
+import Technical_Skills from './NavbarComponents/TechnicalSkills'
 const Home = () => {
   return (
     <div>
