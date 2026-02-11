@@ -4,7 +4,7 @@ import Assets from '../Assets/assets'
 const Footer = () => {
   return (
     <>
-      <div className="mt-10 border w-full p-4 bg-[#f6f8f6]">
+      <div className="mt-20 border w-full p-4 bg-[#f6f8f6]">
         <div className="flex items-center h-[50px] ">
           <div><img src={Assets.Logo} alt="" className="h-20 opacity-80"/></div>
           {/* <div><p className="font-semibold opacity-30">©2026 Portfolio. All rights reserved.</p></div> */}

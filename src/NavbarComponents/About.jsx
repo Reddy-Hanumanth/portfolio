@@ -3,7 +3,7 @@ import Assets from "../Assets/assets";
 
 const About = () => {
   return (
-    <div className="mt-20 px-6  flex items-center justify-center">
+    <div className="mt-20  px-6  flex items-center justify-center">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
         <div className="group relative ">
           <div className="bg-[#f6f8f6] p-4 sm:p-8 rounded-2xl shadow-lg  grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition-all duration-700">
