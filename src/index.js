@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './NavbarComponents/About'
 import Contact from './NavbarComponents/Contact';
 import Projects from './NavbarComponents/projects';
@@ -49,7 +49,7 @@ reportWebVitals();
 
 
 
-// createRoutesFromElements(
+// createRoutesFromElements( //import createRoutesFromElements,Route, BrowserRouter,
 //     <Route path='/' element={<App/>}>,
 //     <Route path='/About' element={<About/>}/>,
 //     <Route path='/Contact' element={<Contact/>}/>,
