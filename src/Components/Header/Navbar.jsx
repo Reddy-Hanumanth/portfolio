@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Assets from "../../Assets/assets";
 
+
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const menuHandler = () => {setMenu(!menu)};
@@ -32,7 +33,7 @@ const Header = () => {
             <span>{link.label}</span>
           </Link>
         ))}
-        <button className="bg-[#39FF14] hover:bg-[#28CC00] text-black rounded-xl px-4 py-2">Resume</button>
+        <button className="bg-[#39FF14] hover:bg-[#28CC00] text-black rounded-xl px-4 py-2"><a href="HanumanthReddy.pdf" target="_blank" rel="noopener noreferrer">resume</a></button>
       </div>
 
 
@@ -46,7 +47,7 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <button className=" bg-[#39FF14] hover:bg-[#28CC00] text-black rounded-xl px-4 py-2 mt-4">Resume</button>
+          <button className=" bg-[#39FF14] hover:bg-[#28CC00] text-black rounded-xl px-4 py-2 mt-4"><a href="HanumanthReddy.pdf" target="_blank" rel="noopener noreferrer">resume</a></button>
         </div> 
       ) : null }
 

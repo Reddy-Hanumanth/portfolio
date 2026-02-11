@@ -3,7 +3,7 @@ import React from "react";
 const TechnicalSkills = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-20 mt-20  py-20">
+      <div className="flex flex-col items-center justify-center gap-20  py-20">
         <div className="bg-[#f6f8f6] p-12 rounded-2xl shadow-lg max-w-[1200px] w-full">
           <div className="text-center mb-10 flex flex-col gap-3">
             <h3 className="text-[#0F766E] text-center font-semibold">
@@ -14,7 +14,9 @@ const TechnicalSkills = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] p-6 ">
             <div className="bg-white border-2 border-gray-300 rounded-lg p-4 flex flex-col justify-evenly gap-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div>logo</div>
+              <div>
+                <i className="fa-solid fa-desktop text-[#0F766E] text-2xl"></i>
+                </div>
               <div className="flex flex-col gap-3">
                 <h3 className="text-lg font-semibold text-gray-900/70">
                   Frontend
@@ -40,7 +42,9 @@ const TechnicalSkills = () => {
               </div>
             </div>
             <div className="bg-white border-2 border-gray-300 rounded-lg p-4 flex flex-col justify-evenly gap-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div>logo</div>
+              <div>
+                <i className="fa-solid fa-database text-[#0F766E] text-2xl"></i>
+              </div>
               <div className="flex flex-col gap-3">
                 <h3 className="text-lg font-semibold text-gray-900/70">
                   Backend
@@ -63,9 +67,12 @@ const TechnicalSkills = () => {
               </div>
             </div>
             <div className="bg-white border-2 border-gray-300 rounded-lg p-4 flex flex-col justify-evenly gap-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div>logo</div>
+              <div>
+                <i className="fa-duotone fa-solid fa-screwdriver-wrench text-green-800 text-2xl"></i>
+              </div>
+
               <div className="flex flex-col gap-3">
-                <h3 className="text-lg font-semibold text-gray-900/70">
+                <h3 className="text-lg font-semibold text-[#0F766E]">
                   Tools
                 </h3>
                 <p className="text-gray-500/70">

@@ -52,8 +52,9 @@ const projects = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-20 mt-20 bg-[#f6f8f6] py-20 ">
-        <div className="flex flex-col gap-3">
+      <div className="flex flex-col items-center justify-center bg-[#f6f8f6] rounded-xl p-10">
+        <div className="flex flex-col items-center justify-center gap-20 p-3">
+          <div className="flex flex-col gap-3">
           <h3 className="text-[#0F766E]  text-center font-semibold">
             PORTFOLIO
           </h3>
@@ -61,19 +62,19 @@ const projects = () => {
           <hr className="w-14 h-[6px] mx-auto bg-blue-600 rounded-full" />
         </div>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 max-w-[1200px]">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 max-w-[1200px] ">
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className=" roup relative mb-6 bg-[#F3F4F6] border-2 border-gray-300 rounded-lg p-5 flex flex-col gap-4 justify-evenly shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="group relative mb-6 bg-white border-2 border-gray-300 rounded-lg p-5 flex flex-col gap-4 justify-evenly shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="transform group-hover:scale-105 transition-transform duration-500">
+              {/* <div className="transform group-hover:scale-105 transition-transform duration-500">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="relative rounded-md object-cover h-48 w-full"
                 />
-              </div>
+              </div> */}
 
               <div className="space-y-4">
                 <h2 className="mt-5 text-xl">{project.title}</h2>
@@ -114,9 +115,10 @@ const projects = () => {
             </div>
           ))}
         </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default projects;
+export default projects

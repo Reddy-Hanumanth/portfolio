@@ -13,14 +13,14 @@ const About = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-10">
-            <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight md:text-7xl lg:text-8xl overflow-hidden text-center">Hanumanth Reddy, <span className="italic opacity-50"><br className="block sm:hidden"/>Full Stack</span><br/>Web Developer </h1>
+            <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight md:text-7xl lg:text-8xl overflow-hidden text-center">Hanumanth Reddy, <span className="italic opacity-50"><br className="block sm:hidden md:hidden"/>Full Stack</span><br className="block sm:hidden md:hidden lg:block"/> Developer </h1>
 
             <p className="mt-8 max-w-[600px] text-lg font-medium md:text-xl text-center text-green-400/70">Building clean, scalable, and user-centric web application with modern technologies.</p>
           </div>
 
           <div className="justify-center gap-4">
-            <button className="bg-[#39FF14] hover:scale-105 text-black rounded-xl px-6 py-3 mr-4 transition-transform duration-300 font-bold">View Projects</button>
-            <button className="bg-transparent border border-gray-400/60 text-black rounded-xl px-6 py-3 font-bold hover:bg-gray-200 transition-colors duration-300">Contact Me</button>
+            <button className="bg-[#39FF14] hover:scale-105 text-black rounded-xl px-6 py-3 mr-4 transition-transform duration-300 font-bold"><Link to={"/projects"}>View Projects</Link></button>
+            <button className="bg-transparent border border-gray-400/60 text-black rounded-xl px-6 py-3 font-bold hover:bg-gray-200 transition-colors duration-300"><Link to={"/contact"}>Contact Me</Link></button>
           </div>
         </div>
 
